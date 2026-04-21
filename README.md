@@ -1,461 +1,224 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GitHub Profile README — Preview</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- PASTE THIS ENTIRE FILE INTO YOUR GitHub username/username REPO AS README.md -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 
-  body {
-    min-height: 100vh;
-    background: #07070f;
-    font-family: 'Inter', sans-serif;
-    color: #e8e8f0;
-    overflow-x: hidden;
-  }
+<div align="center">
 
-  /* ── Aurora background ── */
-  .aurora {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
-  .orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.18;
-    animation: drift linear infinite;
-  }
-  .orb1 { width: 700px; height: 700px; background: #6C63FF; top: -200px; left: -150px; animation-duration: 22s; animation-name: drift1; }
-  .orb2 { width: 500px; height: 500px; background: #1e9fff; top: 30%; right: -100px; animation-duration: 28s; animation-name: drift2; }
-  .orb3 { width: 600px; height: 600px; background: #0fd4b0; bottom: -150px; left: 30%; animation-duration: 34s; animation-name: drift3; }
-  .orb4 { width: 400px; height: 400px; background: #c463ff; top: 55%; left: 10%; animation-duration: 19s; animation-name: drift4; }
-
-  @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(80px,60px) scale(1.05)} 66%{transform:translate(-40px,100px) scale(0.95)} }
-  @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-90px,50px) scale(1.08)} 66%{transform:translate(30px,-80px) scale(0.96)} }
-  @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-60px,-70px) scale(1.06)} }
-  @keyframes drift4 { 0%,100%{transform:translate(0,0) scale(1)} 40%{transform:translate(70px,-50px) scale(1.04)} 80%{transform:translate(-30px,60px) scale(0.97)} }
-
-  /* ── Layout ── */
-  .page {
-    position: relative;
-    z-index: 1;
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 60px 24px 80px;
-  }
-
-  /* ── Glass card ── */
-  .glass {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 36px 40px;
-    margin-bottom: 20px;
-    transition: border-color 0.4s;
-  }
-  .glass:hover { border-color: rgba(108,99,255,0.3); }
-
-  /* ── Hero ── */
-  .hero { text-align: center; padding: 50px 40px; }
-  .avatar-ring {
-    width: 90px; height: 90px;
-    border-radius: 50%;
-    margin: 0 auto 24px;
-    background: linear-gradient(135deg, #6C63FF, #0fd4b0);
-    padding: 2px;
-    animation: spin-slow 8s linear infinite;
-  }
-  @keyframes spin-slow { to { transform: rotate(360deg); } }
-  .avatar-inner {
-    width: 100%; height: 100%;
-    border-radius: 50%;
-    background: #10101a;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 28px; font-weight: 500;
-    color: #e8e8f0;
-  }
-  .hero h1 {
-    font-size: 2.2rem; font-weight: 600;
-    background: linear-gradient(120deg, #ffffff 30%, #9b8fff);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-  }
-  .role-badge {
-    display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    color: #8b7ff0;
-    border: 1px solid rgba(108,99,255,0.35);
-    border-radius: 20px;
-    padding: 5px 16px;
-    letter-spacing: 0.04em;
-    margin-bottom: 20px;
-  }
-  .hero p { font-size: 0.95rem; color: #9090b0; line-height: 1.75; max-width: 480px; margin: 0 auto 28px; }
-
-  /* ── Typing cursor ── */
-  .typed-wrap { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #6C63FF; }
-  .cursor { display: inline-block; animation: blink 1s step-end infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
-  /* ── Social row ── */
-  .socials { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
-  .social-btn {
-    display: flex; align-items: center; gap: 7px;
-    padding: 8px 16px; border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.04);
-    color: #c0c0d8; font-size: 0.78rem; text-decoration: none;
-    transition: all 0.25s;
-    font-family: 'Inter', sans-serif;
-  }
-  .social-btn:hover { background: rgba(108,99,255,0.15); border-color: rgba(108,99,255,0.4); color: #fff; }
-  .social-btn .dot { width: 6px; height: 6px; border-radius: 50%; }
-
-  /* ── Section header ── */
-  .section-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: #6C63FF;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .section-label::after { content:''; flex:1; height:1px; background: rgba(108,99,255,0.2); }
-
-  /* ── About ── */
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
-  .about-item {
-    display: flex; align-items: flex-start; gap: 10px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 12px; padding: 14px 16px;
-  }
-  .about-icon { font-size: 15px; margin-top: 1px; }
-  .about-item span { font-size: 0.82rem; color: #9090b0; line-height: 1.5; }
-  .about-item strong { color: #d8d8ee; font-weight: 500; }
-
-  /* ── Skills ── */
-  .skill-group { margin-bottom: 20px; }
-  .skill-group:last-child { margin-bottom: 0; }
-  .skill-group-title { font-size: 0.72rem; color: #6060a0; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    padding: 5px 12px;
-    border-radius: 8px;
-    border: 1px solid;
-    transition: all 0.2s;
-    cursor: default;
-  }
-  .tag:hover { transform: translateY(-1px); }
-  .tag.violet { background: rgba(108,99,255,0.1); border-color: rgba(108,99,255,0.3); color: #a89fff; }
-  .tag.teal   { background: rgba(15,212,176,0.08); border-color: rgba(15,212,176,0.25); color: #5ee8cc; }
-  .tag.blue   { background: rgba(30,159,255,0.08); border-color: rgba(30,159,255,0.25); color: #70bfff; }
-  .tag.gray   { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: #9898b8; }
-
-  /* ── Projects ── */
-  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
-  .project-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px; padding: 20px 22px;
-    transition: all 0.3s;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-  }
-  .project-card:hover { border-color: rgba(108,99,255,0.4); background: rgba(108,99,255,0.06); transform: translateY(-2px); }
-  .project-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-  .project-name { font-size: 0.9rem; font-weight: 500; color: #d8d8f0; }
-  .project-arrow { color: #6C63FF; font-size: 0.9rem; opacity: 0; transition: opacity 0.2s; }
-  .project-card:hover .project-arrow { opacity: 1; }
-  .project-desc { font-size: 0.78rem; color: #6868a0; line-height: 1.55; margin-bottom: 14px; }
-  .project-tech { display: flex; gap: 6px; flex-wrap: wrap; }
-  .tech-pip { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; padding: 3px 8px; border-radius: 6px; background: rgba(255,255,255,0.06); color: #8888b0; border: 1px solid rgba(255,255,255,0.08); }
-
-  /* ── Stats ── */
-  .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 4px; }
-  .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; text-align: center; }
-  .stat-num { font-size: 1.8rem; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
-  .stat-num.violet { color: #8b7fff; }
-  .stat-num.teal   { color: #0fd4b0; }
-  .stat-num.blue   { color: #4ea9ff; }
-  .stat-lbl { font-size: 0.72rem; color: #5858a0; margin-top: 4px; letter-spacing: 0.05em; }
-
-  .streak-bar { margin-top: 20px; }
-  .streak-label { display: flex; justify-content: space-between; font-size: 0.72rem; color: #5858a0; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
-  .bar-track { height: 4px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
-  .bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #6C63FF, #0fd4b0); animation: fill-in 1.8s ease forwards; transform-origin: left; }
-  @keyframes fill-in { from{width:0} }
-
-  /* ── Fun facts ── */
-  .code-block {
-    background: rgba(0,0,0,0.35);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px; padding: 22px 26px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem; line-height: 1.8;
-    color: #9090b0;
-    margin-top: 4px;
-  }
-  .code-block .k { color: #8b7fff; }
-  .code-block .s { color: #5ed4b0; }
-  .code-block .c { color: #4a4a70; }
-  .code-block .f { color: #e8c96a; }
-  .code-block .n { color: #e8e8f0; }
-
-  /* ── Footer ── */
-  .footer { text-align: center; padding-top: 10px; }
-  .footer p { font-size: 0.75rem; color: #3a3a60; font-family: 'JetBrains Mono', monospace; }
-  .footer span { color: #6C63FF; }
-
-  /* ── Animations ── */
-  .fade-up { opacity: 0; transform: translateY(24px); animation: fadeup 0.7s ease forwards; }
-  @keyframes fadeup { to { opacity:1; transform:translateY(0); } }
-  .d1{animation-delay:0.1s} .d2{animation-delay:0.2s} .d3{animation-delay:0.3s}
-  .d4{animation-delay:0.4s} .d5{animation-delay:0.5s} .d6{animation-delay:0.6s}
-
-  @media(max-width:600px) {
-    .about-grid, .projects-grid, .stats-row { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 1.7rem; }
-    .glass { padding: 24px 20px; }
-  }
-</style>
-</head>
-<body>
-
-<div class="aurora">
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-  <div class="orb orb3"></div>
-  <div class="orb orb4"></div>
-</div>
-
-<div class="page">
-
-  <!-- HERO -->
-  <div class="glass hero fade-up d1">
-    <div class="avatar-ring">
-      <div class="avatar-inner">YN</div>
-    </div>
-    <h1>Your Name</h1>
-    <div class="role-badge">// Full Stack Developer</div>
-    <p>I craft scalable, thoughtful software — from clean APIs to pixel-perfect interfaces. Passionate about turning complex problems into elegant solutions.</p>
-    <div class="typed-wrap">
-      <span id="typed-text"></span><span class="cursor">▌</span>
-    </div>
-    <div class="socials">
-      <a href="mailto:you@email.com" class="social-btn"><span class="dot" style="background:#ff7070"></span>Email</a>
-      <a href="#" class="social-btn"><span class="dot" style="background:#0077B5"></span>LinkedIn</a>
-      <a href="#" class="social-btn"><span class="dot" style="background:#6C63FF"></span>GitHub</a>
-      <a href="#" class="social-btn"><span class="dot" style="background:#0fd4b0"></span>Portfolio</a>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <div class="glass fade-up d2">
-    <div class="section-label">01 · About</div>
-    <div class="about-grid">
-      <div class="about-item"><span class="about-icon">🔭</span><span>Working on <strong>[Your Current Project]</strong></span></div>
-      <div class="about-item"><span class="about-icon">🌱</span><span>Currently learning <strong>[New Skill / Tech]</strong></span></div>
-      <div class="about-item"><span class="about-icon">🤝</span><span>Open to <strong>open-source collabs</strong></span></div>
-      <div class="about-item"><span class="about-icon">📍</span><span>Based in <strong>[Your City, Country]</strong></span></div>
-    </div>
-  </div>
-
-  <!-- SKILLS -->
-  <div class="glass fade-up d3">
-    <div class="section-label">02 · Tech Stack</div>
-    <div class="skill-group">
-      <div class="skill-group-title">Languages</div>
-      <div class="tags">
-        <span class="tag violet">Python</span>
-        <span class="tag violet">JavaScript</span>
-        <span class="tag violet">TypeScript</span>
-        <span class="tag violet">Go</span>
-        <span class="tag violet">C++</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">Frameworks</div>
-      <div class="tags">
-        <span class="tag teal">React</span>
-        <span class="tag teal">Next.js</span>
-        <span class="tag teal">Node.js</span>
-        <span class="tag teal">FastAPI</span>
-        <span class="tag teal">Express</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">Cloud & Tools</div>
-      <div class="tags">
-        <span class="tag blue">AWS</span>
-        <span class="tag blue">Docker</span>
-        <span class="tag blue">PostgreSQL</span>
-        <span class="tag blue">Redis</span>
-        <span class="tag gray">Git</span>
-        <span class="tag gray">Linux</span>
-        <span class="tag gray">Figma</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="glass fade-up d4">
-    <div class="section-label">03 · Featured Projects</div>
-    <div class="projects-grid">
-      <a href="#" class="project-card">
-        <div class="project-top">
-          <div class="project-name">Project Alpha</div>
-          <div class="project-arrow">↗</div>
-        </div>
-        <div class="project-desc">A short description of what this does and why it's interesting. Replace with your actual project.</div>
-        <div class="project-tech">
-          <span class="tech-pip">React</span>
-          <span class="tech-pip">Node.js</span>
-          <span class="tech-pip">PostgreSQL</span>
-        </div>
-      </a>
-      <a href="#" class="project-card">
-        <div class="project-top">
-          <div class="project-name">Project Beta</div>
-          <div class="project-arrow">↗</div>
-        </div>
-        <div class="project-desc">A short description of what this does and why it's interesting. Replace with your actual project.</div>
-        <div class="project-tech">
-          <span class="tech-pip">Python</span>
-          <span class="tech-pip">FastAPI</span>
-          <span class="tech-pip">Docker</span>
-        </div>
-      </a>
-      <a href="#" class="project-card">
-        <div class="project-top">
-          <div class="project-name">Project Gamma</div>
-          <div class="project-arrow">↗</div>
-        </div>
-        <div class="project-desc">A short description of what this does and why it's interesting. Replace with your actual project.</div>
-        <div class="project-tech">
-          <span class="tech-pip">Next.js</span>
-          <span class="tech-pip">TypeScript</span>
-          <span class="tech-pip">AWS</span>
-        </div>
-      </a>
-      <a href="#" class="project-card">
-        <div class="project-top">
-          <div class="project-name">Project Delta</div>
-          <div class="project-arrow">↗</div>
-        </div>
-        <div class="project-desc">A short description of what this does and why it's interesting. Replace with your actual project.</div>
-        <div class="project-tech">
-          <span class="tech-pip">Go</span>
-          <span class="tech-pip">Redis</span>
-          <span class="tech-pip">Linux</span>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- STATS -->
-  <div class="glass fade-up d5">
-    <div class="section-label">04 · GitHub Stats</div>
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-num violet" id="cnt-repos">0</div>
-        <div class="stat-lbl">Repositories</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num teal" id="cnt-commits">0</div>
-        <div class="stat-lbl">Commits (2024)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num blue" id="cnt-stars">0</div>
-        <div class="stat-lbl">Stars Earned</div>
-      </div>
-    </div>
-    <div class="streak-bar">
-      <div class="streak-label"><span>Current Streak</span><span>🔥 Replace with real data</span></div>
-      <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
-    </div>
-    <p style="font-size:0.72rem;color:#404070;font-family:'JetBrains Mono',monospace;margin-top:14px;text-align:center;">
-      ↳ Replace numbers with your real stats from github-readme-stats.vercel.app
-    </p>
-  </div>
-
-  <!-- FUN FACTS -->
-  <div class="glass fade-up d6">
-    <div class="section-label">05 · When Not Coding</div>
-    <div class="code-block">
-<span class="c">// life.yaml</span>
-<br><span class="k">const</span> <span class="n">me</span> = {
-<br>&nbsp;&nbsp;<span class="f">currently_obsessed_with</span>: <span class="s">"[latest thing]"</span>,
-<br>&nbsp;&nbsp;<span class="f">hobbies</span>: [<span class="s">"gaming"</span>, <span class="s">"reading"</span>, <span class="s">"[your hobby]"</span>],
-<br>&nbsp;&nbsp;<span class="f">fuel</span>: <span class="s">"coffee ☕ and curiosity"</span>,
-<br>&nbsp;&nbsp;<span class="f">fun_fact</span>: <span class="s">"[Something surprising about you]"</span>,
-<br>&nbsp;&nbsp;<span class="f">life_motto</span>: <span class="s">"Ship it. Learn from it. Improve it."</span>
-<br>}
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer fade-up" style="animation-delay:0.7s">
-    <p>Built with <span>♥</span> &nbsp;·&nbsp; Open to opportunities &nbsp;·&nbsp; Let's build something great</p>
-  </div>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=6C63FF&height=200&section=header&text=Your%20Name&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20Builder%20%7C%20Open%20Source%20Enthusiast&descAlignY=58&descSize=18&animation=fadeIn" width="100%"/>
 
 </div>
 
-<script>
-  // Typing animation
-  const phrases = [
-    "Building things that matter.",
-    "Open to new opportunities.",
-    "Always shipping, always learning.",
-    "Let's collaborate on something great."
-  ];
-  let pi = 0, ci = 0, del = false;
-  const el = document.getElementById('typed-text');
-  function type() {
-    const word = phrases[pi];
-    if (!del) {
-      el.textContent = word.slice(0, ++ci);
-      if (ci === word.length) { del = true; setTimeout(type, 2200); return; }
-    } else {
-      el.textContent = word.slice(0, --ci);
-      if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; }
-    }
-    setTimeout(type, del ? 40 : 65);
-  }
-  setTimeout(type, 800);
+<div align="center">
 
-  // Count-up animation
-  function countUp(id, target, suffix = '') {
-    const el = document.getElementById(id);
-    let cur = 0;
-    const step = Math.ceil(target / 60);
-    const t = setInterval(() => {
-      cur = Math.min(cur + step, target);
-      el.textContent = cur + suffix;
-      if (cur >= target) clearInterval(t);
-    }, 25);
-  }
-  setTimeout(() => {
-    countUp('cnt-repos', 42);
-    countUp('cnt-commits', 847);
-    countUp('cnt-stars', 230);
-  }, 600);
-</script>
-</body>
-</html>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=3000&pause=1200&color=6C63FF&center=true&vCenter=true&width=600&lines=Building+things+that+matter+%F0%9F%9A%80;Always+shipping%2C+always+learning+%E2%9C%A8;Open+to+new+opportunities+%F0%9F%8C%9F;Let%27s+collaborate+on+something+great+%F0%9F%A4%9D)](https://git.io/typing-svg)
+
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=yourusername&label=Profile+Views&color=6C63FF&style=flat-square" />
+&nbsp;
+<a href="https://github.com/yourusername?tab=followers"><img src="https://img.shields.io/github/followers/yourusername?label=Followers&style=flat-square&color=6C63FF&labelColor=1a1a2e" /></a>
+&nbsp;
+<img src="https://img.shields.io/badge/Open%20to%20Work-✓-0fd4b0?style=flat-square&labelColor=1a1a2e" />
+
+</div>
+
+---
+
+## 🧑‍💻 About Me
+
+```yaml
+name:       "Your Name"
+role:       "Full Stack Developer"
+location:   "Your City, Country 📍"
+available:  true
+
+focus:
+  - Building scalable web applications
+  - Clean architecture & system design
+  - Open source contributions
+
+currently:
+  learning:  "[Tech / Skill you're learning]"
+  building:  "[Your Current Project]"
+  reading:   "[Book / Resource you're into]"
+
+fun_fact:   "[Something quirky about you]"
+motto:      "Ship it. Learn from it. Improve it."
+```
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-0a0a1a?style=for-the-badge&logo=python&logoColor=6C63FF)
+![JavaScript](https://img.shields.io/badge/JavaScript-0a0a1a?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![TypeScript](https://img.shields.io/badge/TypeScript-0a0a1a?style=for-the-badge&logo=typescript&logoColor=3B82F6)
+![Go](https://img.shields.io/badge/Go-0a0a1a?style=for-the-badge&logo=go&logoColor=00ADD8)
+![C++](https://img.shields.io/badge/C++-0a0a1a?style=for-the-badge&logo=cplusplus&logoColor=00599C)
+
+**Frontend**
+
+![React](https://img.shields.io/badge/React-0a0a1a?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-0a0a1a?style=for-the-badge&logo=nextdotjs&logoColor=ffffff)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-0a0a1a?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8)
+![HTML5](https://img.shields.io/badge/HTML5-0a0a1a?style=for-the-badge&logo=html5&logoColor=E34F26)
+
+**Backend & Database**
+
+![Node.js](https://img.shields.io/badge/Node.js-0a0a1a?style=for-the-badge&logo=nodedotjs&logoColor=339933)
+![FastAPI](https://img.shields.io/badge/FastAPI-0a0a1a?style=for-the-badge&logo=fastapi&logoColor=009688)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0a0a1a?style=for-the-badge&logo=postgresql&logoColor=336791)
+![MongoDB](https://img.shields.io/badge/MongoDB-0a0a1a?style=for-the-badge&logo=mongodb&logoColor=47A248)
+![Redis](https://img.shields.io/badge/Redis-0a0a1a?style=for-the-badge&logo=redis&logoColor=DC382D)
+
+**Cloud & DevOps**
+
+![AWS](https://img.shields.io/badge/AWS-0a0a1a?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
+![Docker](https://img.shields.io/badge/Docker-0a0a1a?style=for-the-badge&logo=docker&logoColor=2496ED)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-0a0a1a?style=for-the-badge&logo=githubactions&logoColor=2088FF)
+![Linux](https://img.shields.io/badge/Linux-0a0a1a?style=for-the-badge&logo=linux&logoColor=FCC624)
+![Nginx](https://img.shields.io/badge/Nginx-0a0a1a?style=for-the-badge&logo=nginx&logoColor=009639)
+
+</div>
+
+---
+
+## 🚀 Featured Projects
+
+<div align="center">
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### ⚡ Project Alpha
+> **[Short tagline — what does it do?]**
+
+A 2–3 sentence description of the project. What problem it solves, who it's for, and what makes it interesting.
+
+![React](https://img.shields.io/badge/-React-0a0a1a?style=flat-square&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/-Node.js-0a0a1a?style=flat-square&logo=nodedotjs&logoColor=339933)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-0a0a1a?style=flat-square&logo=postgresql&logoColor=336791)
+
+[![Repo](https://img.shields.io/badge/View_Repo-6C63FF?style=flat-square&logo=github&logoColor=white)](https://github.com/yourusername/project-alpha)
+[![Demo](https://img.shields.io/badge/Live_Demo-0fd4b0?style=flat-square&logo=vercel&logoColor=white)](https://your-demo-link.com)
+
+</td>
+<td width="50%" valign="top">
+
+### 🔥 Project Beta
+> **[Short tagline — what does it do?]**
+
+A 2–3 sentence description of the project. What problem it solves, who it's for, and what makes it interesting.
+
+![Python](https://img.shields.io/badge/-Python-0a0a1a?style=flat-square&logo=python&logoColor=6C63FF)
+![FastAPI](https://img.shields.io/badge/-FastAPI-0a0a1a?style=flat-square&logo=fastapi&logoColor=009688)
+![Docker](https://img.shields.io/badge/-Docker-0a0a1a?style=flat-square&logo=docker&logoColor=2496ED)
+
+[![Repo](https://img.shields.io/badge/View_Repo-6C63FF?style=flat-square&logo=github&logoColor=white)](https://github.com/yourusername/project-beta)
+[![Demo](https://img.shields.io/badge/Live_Demo-0fd4b0?style=flat-square&logo=vercel&logoColor=white)](https://your-demo-link.com)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🌐 Project Gamma
+> **[Short tagline — what does it do?]**
+
+A 2–3 sentence description of the project. What problem it solves, who it's for, and what makes it interesting.
+
+![Next.js](https://img.shields.io/badge/-Next.js-0a0a1a?style=flat-square&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/-TypeScript-0a0a1a?style=flat-square&logo=typescript&logoColor=3B82F6)
+![AWS](https://img.shields.io/badge/-AWS-0a0a1a?style=flat-square&logo=amazonaws&logoColor=FF9900)
+
+[![Repo](https://img.shields.io/badge/View_Repo-6C63FF?style=flat-square&logo=github&logoColor=white)](https://github.com/yourusername/project-gamma)
+[![Demo](https://img.shields.io/badge/Live_Demo-0fd4b0?style=flat-square&logo=vercel&logoColor=white)](https://your-demo-link.com)
+
+</td>
+<td width="50%" valign="top">
+
+### 🎯 Project Delta
+> **[Short tagline — what does it do?]**
+
+A 2–3 sentence description of the project. What problem it solves, who it's for, and what makes it interesting.
+
+![Go](https://img.shields.io/badge/-Go-0a0a1a?style=flat-square&logo=go&logoColor=00ADD8)
+![Redis](https://img.shields.io/badge/-Redis-0a0a1a?style=flat-square&logo=redis&logoColor=DC382D)
+![Linux](https://img.shields.io/badge/-Linux-0a0a1a?style=flat-square&logo=linux&logoColor=FCC624)
+
+[![Repo](https://img.shields.io/badge/View_Repo-6C63FF?style=flat-square&logo=github&logoColor=white)](https://github.com/yourusername/project-delta)
+[![Demo](https://img.shields.io/badge/Live_Demo-0fd4b0?style=flat-square&logo=vercel&logoColor=white)](https://your-demo-link.com)
+
+</td>
+</tr>
+</table>
+</div>
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=transparent&hide_border=true&title_color=6C63FF&icon_color=0fd4b0&text_color=c0c0d8&bg_color=0a0a1a&count_private=true&include_all_commits=true&rank_icon=github" height="170"/>
+&nbsp;&nbsp;
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=transparent&hide_border=true&title_color=6C63FF&text_color=c0c0d8&bg_color=0a0a1a&langs_count=8" height="170"/>
+
+<br/><br/>
+
+<img src="https://streak-stats.demolab.com?user=yourusername&theme=transparent&hide_border=true&ring=6C63FF&fire=0fd4b0&currStreakLabel=6C63FF&sideLabels=6C63FF&dates=888899&stroke=6C63FF" height="150"/>
+
+<br/><br/>
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=yourusername&theme=onestar&no-frame=true&row=1&column=6&margin-w=6)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+---
+
+## 📈 Contribution Graph
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=yourusername&bg_color=0a0a1a&color=6C63FF&line=0fd4b0&point=ffffff&area=true&hide_border=true" width="100%"/>
+
+</div>
+
+---
+
+## ✨ When I'm Not Coding
+
+```javascript
+const life = {
+  hobbies:    ["🎮 Gaming", "📚 Reading", "🎵 Music", "[Your hobby]"],
+  obsessed:   "[Latest thing you're deep into]",
+  fun_fact:   "[Something surprising about you]",
+  fuel:       "Coffee ☕ and late-night curiosity",
+  dream_trip: "[A place you want to visit]",
+  motto:      "Ship it. Learn from it. Improve it. 🚀"
+}
+```
+
+---
+
+## 🤝 Let's Connect
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-0a0a1a?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:youremail@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0a0a1a?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://linkedin.com/in/yourprofile)
+[![Twitter](https://img.shields.io/badge/Twitter-0a0a1a?style=for-the-badge&logo=twitter&logoColor=1DA1F2)](https://twitter.com/yourhandle)
+[![Portfolio](https://img.shields.io/badge/Portfolio-0a0a1a?style=for-the-badge&logo=safari&logoColor=0fd4b0)](https://yourwebsite.com)
+[![Dev.to](https://img.shields.io/badge/Dev.to-0a0a1a?style=for-the-badge&logo=devdotto&logoColor=ffffff)](https://dev.to/yourprofile)
+
+<br/>
+
+> *"The best code is no code at all — but when you must write it, make it beautiful."*
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=6C63FF&height=120&section=footer&animation=fadeIn" width="100%"/>
+
+</div>
