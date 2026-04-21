@@ -1,226 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Profile README — Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  body {
+    min-height: 100vh;
+    background: #07070f;
+    font-family: 'Inter', sans-serif;
+    color: #e8e8f0;
+    overflow-x: hidden;
+  }
 
-<!--
-**Devkaran-Patidar/Devkaran-Patidar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  /* ── Aurora background ── */
+  .aurora {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.18;
+    animation: drift linear infinite;
+  }
+  .orb1 { width: 700px; height: 700px; background: #6C63FF; top: -200px; left: -150px; animation-duration: 22s; animation-name: drift1; }
+  .orb2 { width: 500px; height: 500px; background: #1e9fff; top: 30%; right: -100px; animation-duration: 28s; animation-name: drift2; }
+  .orb3 { width: 600px; height: 600px; background: #0fd4b0; bottom: -150px; left: 30%; animation-duration: 34s; animation-name: drift3; }
+  .orb4 { width: 400px; height: 400px; background: #c463ff; top: 55%; left: 10%; animation-duration: 19s; animation-name: drift4; }
 
-Here are some ideas to get you started:
+  @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(80px,60px) scale(1.05)} 66%{transform:translate(-40px,100px) scale(0.95)} }
+  @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-90px,50px) scale(1.08)} 66%{transform:translate(30px,-80px) scale(0.96)} }
+  @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-60px,-70px) scale(1.06)} }
+  @keyframes drift4 { 0%,100%{transform:translate(0,0) scale(1)} 40%{transform:translate(70px,-50px) scale(1.04)} 80%{transform:translate(-30px,60px) scale(0.97)} }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  /* ── Layout ── */
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
 
-<div align="center">
+  /* ── Glass card ── */
+  .glass {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 36px 40px;
+    margin-bottom: 20px;
+    transition: border-color 0.4s;
+  }
+  .glass:hover { border-color: rgba(108,99,255,0.3); }
 
-# Hey there, I'm [Your Name] 👋
-### ✨ [Your Role] · Builder · Problem Solver · Lifelong Learner
+  /* ── Hero ── */
+  .hero { text-align: center; padding: 50px 40px; }
+  .avatar-ring {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #6C63FF, #0fd4b0);
+    padding: 2px;
+    animation: spin-slow 8s linear infinite;
+  }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+  .avatar-inner {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    background: #10101a;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px; font-weight: 500;
+    color: #e8e8f0;
+  }
+  .hero h1 {
+    font-size: 2.2rem; font-weight: 600;
+    background: linear-gradient(120deg, #ffffff 30%, #9b8fff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .role-badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: #8b7ff0;
+    border: 1px solid rgba(108,99,255,0.35);
+    border-radius: 20px;
+    padding: 5px 16px;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+  }
+  .hero p { font-size: 0.95rem; color: #9090b0; line-height: 1.75; max-width: 480px; margin: 0 auto 28px; }
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&width=500&lines=Full+Stack+Developer+%F0%9F%9A%80;Open+Source+Enthusiast+%F0%9F%8C%9F;Always+Learning+New+Things+%F0%9F%93%9A;Let%27s+Build+Something+Great!+%F0%9F%94%A5)](https://git.io/typing-svg)
+  /* ── Typing cursor ── */
+  .typed-wrap { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #6C63FF; }
+  .cursor { display: inline-block; animation: blink 1s step-end infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-<img src="https://komarev.com/ghpvc/?username=yourusername&label=Profile%20Views&color=6C63FF&style=flat-square" alt="Profile Views" />
-&nbsp;
-[![GitHub followers](https://img.shields.io/github/followers/yourusername?label=Followers&style=flat-square&color=6C63FF)](https://github.com/yourusername)
+  /* ── Social row ── */
+  .socials { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+  .social-btn {
+    display: flex; align-items: center; gap: 7px;
+    padding: 8px 16px; border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.04);
+    color: #c0c0d8; font-size: 0.78rem; text-decoration: none;
+    transition: all 0.25s;
+    font-family: 'Inter', sans-serif;
+  }
+  .social-btn:hover { background: rgba(108,99,255,0.15); border-color: rgba(108,99,255,0.4); color: #fff; }
+  .social-btn .dot { width: 6px; height: 6px; border-radius: 50%; }
+
+  /* ── Section header ── */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: #6C63FF;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-label::after { content:''; flex:1; height:1px; background: rgba(108,99,255,0.2); }
+
+  /* ── About ── */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .about-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px; padding: 14px 16px;
+  }
+  .about-icon { font-size: 15px; margin-top: 1px; }
+  .about-item span { font-size: 0.82rem; color: #9090b0; line-height: 1.5; }
+  .about-item strong { color: #d8d8ee; font-weight: 500; }
+
+  /* ── Skills ── */
+  .skill-group { margin-bottom: 20px; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-group-title { font-size: 0.72rem; color: #6060a0; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid;
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .tag:hover { transform: translateY(-1px); }
+  .tag.violet { background: rgba(108,99,255,0.1); border-color: rgba(108,99,255,0.3); color: #a89fff; }
+  .tag.teal   { background: rgba(15,212,176,0.08); border-color: rgba(15,212,176,0.25); color: #5ee8cc; }
+  .tag.blue   { background: rgba(30,159,255,0.08); border-color: rgba(30,159,255,0.25); color: #70bfff; }
+  .tag.gray   { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: #9898b8; }
+
+  /* ── Projects ── */
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+  .project-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px; padding: 20px 22px;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+  .project-card:hover { border-color: rgba(108,99,255,0.4); background: rgba(108,99,255,0.06); transform: translateY(-2px); }
+  .project-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .project-name { font-size: 0.9rem; font-weight: 500; color: #d8d8f0; }
+  .project-arrow { color: #6C63FF; font-size: 0.9rem; opacity: 0; transition: opacity 0.2s; }
+  .project-card:hover .project-arrow { opacity: 1; }
+  .project-desc { font-size: 0.78rem; color: #6868a0; line-height: 1.55; margin-bottom: 14px; }
+  .project-tech { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tech-pip { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; padding: 3px 8px; border-radius: 6px; background: rgba(255,255,255,0.06); color: #8888b0; border: 1px solid rgba(255,255,255,0.08); }
+
+  /* ── Stats ── */
+  .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 4px; }
+  .stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; text-align: center; }
+  .stat-num { font-size: 1.8rem; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+  .stat-num.violet { color: #8b7fff; }
+  .stat-num.teal   { color: #0fd4b0; }
+  .stat-num.blue   { color: #4ea9ff; }
+  .stat-lbl { font-size: 0.72rem; color: #5858a0; margin-top: 4px; letter-spacing: 0.05em; }
+
+  .streak-bar { margin-top: 20px; }
+  .streak-label { display: flex; justify-content: space-between; font-size: 0.72rem; color: #5858a0; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
+  .bar-track { height: 4px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #6C63FF, #0fd4b0); animation: fill-in 1.8s ease forwards; transform-origin: left; }
+  @keyframes fill-in { from{width:0} }
+
+  /* ── Fun facts ── */
+  .code-block {
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px; padding: 22px 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem; line-height: 1.8;
+    color: #9090b0;
+    margin-top: 4px;
+  }
+  .code-block .k { color: #8b7fff; }
+  .code-block .s { color: #5ed4b0; }
+  .code-block .c { color: #4a4a70; }
+  .code-block .f { color: #e8c96a; }
+  .code-block .n { color: #e8e8f0; }
+
+  /* ── Footer ── */
+  .footer { text-align: center; padding-top: 10px; }
+  .footer p { font-size: 0.75rem; color: #3a3a60; font-family: 'JetBrains Mono', monospace; }
+  .footer span { color: #6C63FF; }
+
+  /* ── Animations ── */
+  .fade-up { opacity: 0; transform: translateY(24px); animation: fadeup 0.7s ease forwards; }
+  @keyframes fadeup { to { opacity:1; transform:translateY(0); } }
+  .d1{animation-delay:0.1s} .d2{animation-delay:0.2s} .d3{animation-delay:0.3s}
+  .d4{animation-delay:0.4s} .d5{animation-delay:0.5s} .d6{animation-delay:0.6s}
+
+  @media(max-width:600px) {
+    .about-grid, .projects-grid, .stats-row { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.7rem; }
+    .glass { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="aurora">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+  <div class="orb orb4"></div>
+</div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="glass hero fade-up d1">
+    <div class="avatar-ring">
+      <div class="avatar-inner">YN</div>
+    </div>
+    <h1>Your Name</h1>
+    <div class="role-badge">// Full Stack Developer</div>
+    <p>I craft scalable, thoughtful software — from clean APIs to pixel-perfect interfaces. Passionate about turning complex problems into elegant solutions.</p>
+    <div class="typed-wrap">
+      <span id="typed-text"></span><span class="cursor">▌</span>
+    </div>
+    <div class="socials">
+      <a href="mailto:you@email.com" class="social-btn"><span class="dot" style="background:#ff7070"></span>Email</a>
+      <a href="#" class="social-btn"><span class="dot" style="background:#0077B5"></span>LinkedIn</a>
+      <a href="#" class="social-btn"><span class="dot" style="background:#6C63FF"></span>GitHub</a>
+      <a href="#" class="social-btn"><span class="dot" style="background:#0fd4b0"></span>Portfolio</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="glass fade-up d2">
+    <div class="section-label">01 · About</div>
+    <div class="about-grid">
+      <div class="about-item"><span class="about-icon">🔭</span><span>Working on <strong>[Your Current Project]</strong></span></div>
+      <div class="about-item"><span class="about-icon">🌱</span><span>Currently learning <strong>[New Skill / Tech]</strong></span></div>
+      <div class="about-item"><span class="about-icon">🤝</span><span>Open to <strong>open-source collabs</strong></span></div>
+      <div class="about-item"><span class="about-icon">📍</span><span>Based in <strong>[Your City, Country]</strong></span></div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="glass fade-up d3">
+    <div class="section-label">02 · Tech Stack</div>
+    <div class="skill-group">
+      <div class="skill-group-title">Languages</div>
+      <div class="tags">
+        <span class="tag violet">Python</span>
+        <span class="tag violet">JavaScript</span>
+        <span class="tag violet">TypeScript</span>
+        <span class="tag violet">Go</span>
+        <span class="tag violet">C++</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Frameworks</div>
+      <div class="tags">
+        <span class="tag teal">React</span>
+        <span class="tag teal">Next.js</span>
+        <span class="tag teal">Node.js</span>
+        <span class="tag teal">FastAPI</span>
+        <span class="tag teal">Express</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Cloud & Tools</div>
+      <div class="tags">
+        <span class="tag blue">AWS</span>
+        <span class="tag blue">Docker</span>
+        <span class="tag blue">PostgreSQL</span>
+        <span class="tag blue">Redis</span>
+        <span class="tag gray">Git</span>
+        <span class="tag gray">Linux</span>
+        <span class="tag gray">Figma</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="glass fade-up d4">
+    <div class="section-label">03 · Featured Projects</div>
+    <div class="projects-grid">
+      <a href="#" class="project-card">
+        <div class="project-top">
+          <div class="project-name">Project Alpha</div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <div class="project-desc">A short description of what this does and why it's interesting. Replace with your actual project.</div>
+        <div class="project-tech">
+          <span class="tech-pip">React</span>
+          <span class="tech-pip">Node.js</span>
+          <span class="tech-pip">PostgreSQL</span>
+        </div>
+      </a>
+      <a href="#" class="project-card">
+        <div class="project-top">
+          <div class="project-name">Project Beta</div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <div class="project-desc">A short description of what this does and why it's interesting. Replace with your actual project.</div>
+        <div class="project-tech">
+          <span class="tech-pip">Python</span>
+          <span class="tech-pip">FastAPI</span>
+          <span class="tech-pip">Docker</span>
+        </div>
+      </a>
+      <a href="#" class="project-card">
+        <div class="project-top">
+          <div class="project-name">Project Gamma</div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <div class="project-desc">A short description of what this does and why it's interesting. Replace with your actual project.</div>
+        <div class="project-tech">
+          <span class="tech-pip">Next.js</span>
+          <span class="tech-pip">TypeScript</span>
+          <span class="tech-pip">AWS</span>
+        </div>
+      </a>
+      <a href="#" class="project-card">
+        <div class="project-top">
+          <div class="project-name">Project Delta</div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <div class="project-desc">A short description of what this does and why it's interesting. Replace with your actual project.</div>
+        <div class="project-tech">
+          <span class="tech-pip">Go</span>
+          <span class="tech-pip">Redis</span>
+          <span class="tech-pip">Linux</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="glass fade-up d5">
+    <div class="section-label">04 · GitHub Stats</div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-num violet" id="cnt-repos">0</div>
+        <div class="stat-lbl">Repositories</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num teal" id="cnt-commits">0</div>
+        <div class="stat-lbl">Commits (2024)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num blue" id="cnt-stars">0</div>
+        <div class="stat-lbl">Stars Earned</div>
+      </div>
+    </div>
+    <div class="streak-bar">
+      <div class="streak-label"><span>Current Streak</span><span>🔥 Replace with real data</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+    </div>
+    <p style="font-size:0.72rem;color:#404070;font-family:'JetBrains Mono',monospace;margin-top:14px;text-align:center;">
+      ↳ Replace numbers with your real stats from github-readme-stats.vercel.app
+    </p>
+  </div>
+
+  <!-- FUN FACTS -->
+  <div class="glass fade-up d6">
+    <div class="section-label">05 · When Not Coding</div>
+    <div class="code-block">
+<span class="c">// life.yaml</span>
+<br><span class="k">const</span> <span class="n">me</span> = {
+<br>&nbsp;&nbsp;<span class="f">currently_obsessed_with</span>: <span class="s">"[latest thing]"</span>,
+<br>&nbsp;&nbsp;<span class="f">hobbies</span>: [<span class="s">"gaming"</span>, <span class="s">"reading"</span>, <span class="s">"[your hobby]"</span>],
+<br>&nbsp;&nbsp;<span class="f">fuel</span>: <span class="s">"coffee ☕ and curiosity"</span>,
+<br>&nbsp;&nbsp;<span class="f">fun_fact</span>: <span class="s">"[Something surprising about you]"</span>,
+<br>&nbsp;&nbsp;<span class="f">life_motto</span>: <span class="s">"Ship it. Learn from it. Improve it."</span>
+<br>}
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer fade-up" style="animation-delay:0.7s">
+    <p>Built with <span>♥</span> &nbsp;·&nbsp; Open to opportunities &nbsp;·&nbsp; Let's build something great</p>
+  </div>
 
 </div>
 
----
+<script>
+  // Typing animation
+  const phrases = [
+    "Building things that matter.",
+    "Open to new opportunities.",
+    "Always shipping, always learning.",
+    "Let's collaborate on something great."
+  ];
+  let pi = 0, ci = 0, del = false;
+  const el = document.getElementById('typed-text');
+  function type() {
+    const word = phrases[pi];
+    if (!del) {
+      el.textContent = word.slice(0, ++ci);
+      if (ci === word.length) { del = true; setTimeout(type, 2200); return; }
+    } else {
+      el.textContent = word.slice(0, --ci);
+      if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; }
+    }
+    setTimeout(type, del ? 40 : 65);
+  }
+  setTimeout(type, 800);
 
-## 🙋‍♂️ About Me
-
-> *"Code is not just syntax — it's the art of turning ideas into reality."*
-
-I'm a passionate **[Your Role]** who loves crafting clean, efficient, and meaningful digital experiences. Whether it's building scalable backends, designing intuitive UIs, or diving deep into data — I'm all in.
-
-- 🔭 Currently working on **[Your Current Project]**
-- 🌱 Learning **[Technology/Skill you're learning]**
-- 🤝 Open to collaborating on **interesting open-source projects**
-- 💬 Ask me about **[Topics you love discussing]**
-- ⚡ Fun fact: **[Something quirky about you]**
-
----
-
-## 🛠️ Tech Stack & Tools
-
-### 💻 Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-
-### 🚀 Frameworks & Libraries
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-
-### 🗄️ Databases & Cloud
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-
-### ⚙️ Dev Tools
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-
----
-
-## 🚀 Featured Projects
-
-<table>
-  <tr>
-    <td width="50%">
-      <h3 align="center">🔥 Project One</h3>
-      <p align="center">
-        <a href="https://github.com/yourusername/project-one">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=yourusername&repo=project-one&theme=tokyonight&hide_border=true" alt="Project One"/>
-        </a>
-      </p>
-      <p align="center">
-        A short description of what this project does and why it's awesome. Mention the key tech used.
-        <br><br>
-        <a href="https://github.com/yourusername/project-one">
-          <img src="https://img.shields.io/badge/Code-View%20Repo-6C63FF?style=flat-square&logo=github"/>
-        </a>
-        &nbsp;
-        <a href="#">
-          <img src="https://img.shields.io/badge/Demo-Live%20Preview-00C49F?style=flat-square&logo=vercel"/>
-        </a>
-      </p>
-    </td>
-    <td width="50%">
-      <h3 align="center">⚡ Project Two</h3>
-      <p align="center">
-        <a href="https://github.com/yourusername/project-two">
-          <img src="https://github-readme-stats.vercel.app/api/pin/?username=yourusername&repo=project-two&theme=tokyonight&hide_border=true" alt="Project Two"/>
-        </a>
-      </p>
-      <p align="center">
-        A short description of what this project does and why it's awesome. Mention the key tech used.
-        <br><br>
-        <a href="https://github.com/yourusername/project-two">
-          <img src="https://img.shields.io/badge/Code-View%20Repo-6C63FF?style=flat-square&logo=github"/>
-        </a>
-        &nbsp;
-        <a href="#">
-          <img src="https://img.shields.io/badge/Demo-Live%20Preview-00C49F?style=flat-square&logo=vercel"/>
-        </a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3 align="center">🌟 Project Three</h3>
-      <p align="center">
-        A short description of what this project does and why it's awesome. Mention the key tech used.
-        <br><br>
-        <a href="https://github.com/yourusername/project-three">
-          <img src="https://img.shields.io/badge/Code-View%20Repo-6C63FF?style=flat-square&logo=github"/>
-        </a>
-        &nbsp;
-        <a href="#">
-          <img src="https://img.shields.io/badge/Demo-Live%20Preview-00C49F?style=flat-square&logo=vercel"/>
-        </a>
-      </p>
-    </td>
-    <td width="50%">
-      <h3 align="center">🎯 Project Four</h3>
-      <p align="center">
-        A short description of what this project does and why it's awesome. Mention the key tech used.
-        <br><br>
-        <a href="https://github.com/yourusername/project-four">
-          <img src="https://img.shields.io/badge/Code-View%20Repo-6C63FF?style=flat-square&logo=github"/>
-        </a>
-        &nbsp;
-        <a href="#">
-          <img src="https://img.shields.io/badge/Demo-Live%20Preview-00C49F?style=flat-square&logo=vercel"/>
-        </a>
-      </p>
-    </td>
-  </tr>
-</table>
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
-&nbsp;
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"/>
-
-</div>
-
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=yourusername&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
-
-</div>
-
----
-
-## 🏆 Achievements
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=yourusername&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
----
-
-## 🎲 Fun Facts & Interests
-
-```yaml
-when_not_coding:
-  - 🎮  Gaming (favourite genre: [RPG / Strategy / FPS])
-  - 📚  Reading about [tech, history, sci-fi, etc.]
-  - 🎵  Listening to [your music taste]
-  - ☕  Surviving on coffee and curiosity
-  - 🌍  Dreaming of travelling to [a place]
-
-life_philosophy:   "Ship it, learn from it, improve it."
-currently_obsessed_with: "[Latest thing you're into]"
-hidden_talent: "[Something surprising about you]"
-```
-
----
-
-## 🤝 Let's Connect
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:youremail@example.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://yourwebsite.com)
-[![Dev.to](https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/yourprofile)
-
-</div>
-
----
-
-<div align="center">
-
-### 💡 A Random Dev Quote to Brighten Your Day
-
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)](https://github.com/piyushsuthar/github-readme-quotes)
-
----
-
-*⭐ If you find my work helpful, consider giving a star to your favourite repo!*
-
-**Thanks for visiting — let's build something amazing together! 🚀**
-
-</div>
+  // Count-up animation
+  function countUp(id, target, suffix = '') {
+    const el = document.getElementById(id);
+    let cur = 0;
+    const step = Math.ceil(target / 60);
+    const t = setInterval(() => {
+      cur = Math.min(cur + step, target);
+      el.textContent = cur + suffix;
+      if (cur >= target) clearInterval(t);
+    }, 25);
+  }
+  setTimeout(() => {
+    countUp('cnt-repos', 42);
+    countUp('cnt-commits', 847);
+    countUp('cnt-stars', 230);
+  }, 600);
+</script>
+</body>
+</html>
