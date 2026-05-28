@@ -75,25 +75,6 @@ $ cat devkaran.config
   <img src="https://streak-stats.demolab.com?user=Devkaran-Patidar&theme=github-dark-blue&hide_border=true&background=0D1117&stroke=00D9FF&ring=00D9FF&fire=FF6B6B&currStreakLabel=00D9FF&sideLabels=00D9FF&dates=8b949e" />
 </div>
 
----
-
-## 🐍 Snake Eating My Contributions
-
-<div align="center">
-
-![Snake](https://github.com/Devkaran-Patidar/Devkaran-Patidar/blob/output/github-snake-dark.svg)
-
-</div>
-
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=Devkaran-Patidar&theme=onestar&no-frame=true&no-bg=true&column=7&margin-w=6)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
 
 ---
 
