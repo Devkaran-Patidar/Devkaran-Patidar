@@ -81,34 +81,7 @@ $ cat devkaran.config
 
 <div align="center">
 
-> ⚙️ **One-time setup:** Create `.github/workflows/snake.yml` in your repo with this content:
-
-```yaml
-name: Generate Snake
-on:
-  schedule:
-    - cron: "0 */12 * * *"
-  workflow_dispatch:
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: Devkaran-Patidar
-          outputs: |
-            dist/github-snake-dark.svg?palette=github-dark
-      - uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
-Then replace this block with:
-
-`![Snake](https://github.com/Devkaran-Patidar/Devkaran-Patidar/blob/output/github-snake-dark.svg)`
+![Snake](https://github.com/Devkaran-Patidar/Devkaran-Patidar/blob/output/github-snake-dark.svg)
 
 </div>
 
