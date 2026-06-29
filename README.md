@@ -64,10 +64,10 @@ $ cat devkaran.config
 
 ## 📊 GitHub Analytics
 
-<div align="center">
+<!-- <div align="center">
   <img height="195px" src="https://github-readme-stats.vercel.app/api?username=Devkaran-Patidar&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&title_color=00d9ff&icon_color=00d9ff&text_color=c9d1d9&bg_color=0d1117" />
   <img height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Devkaran-Patidar&layout=compact&theme=github_dark&hide_border=true&title_color=00d9ff&text_color=c9d1d9&bg_color=0d1117&langs_count=8" />
-</div>
+</div> -->
 
 <br/>
 
