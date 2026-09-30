@@ -1,113 +1,277 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0a3d62,100:00d9ff&height=200&section=header&text=Devkaran%20Patidar&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=60&descSize=22&animation=fadeIn" />
-</div>
 
-<div align="center">
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0a3d62,100:00d9ff&height=220&section=header&text=Devkaran%20Patidar&fontSize=58&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20Python%20%7C%20React&descAlignY=61&descSize=20&animation=fadeIn" />
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=3000&pause=800&color=00D9FF&center=true&vCenter=true&width=700&lines=Hey+there!+I'm+Devkaran+%F0%9F%91%8B;Full+Stack+Developer+%7C+Problem+Solver;Building+products+people+love+%F0%9F%9A%80;Clean+code+%7C+Scalable+systems+%7C+Open+source)](https://git.io/typing-svg)
+<a href="https://github.com/Devkaran-Patidar">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=900&color=00D9FF&center=true&vCenter=true&width=750&lines=Hey+there!+I'm+Devkaran+%F0%9F%91%8B;Full+Stack+Developer;Building+Web+Applications+with+Python+%26+React;REST+APIs+%7C+Django+%7C+React+%7C+SQL;Learning%2C+Building%2C+and+Improving+Every+Day" alt="Typing SVG" />
+</a>
+
+<br/>
+
+<a href="https://github.com/Devkaran-Patidar">
+  <img src="https://img.shields.io/github/followers/Devkaran-Patidar?label=Followers&style=flat-square&color=00d9ff" />
+</a>
+<a href="https://github.com/Devkaran-Patidar">
+  <img src="https://img.shields.io/github/stars/Devkaran-Patidar?label=Stars&style=flat-square&color=0a3d62" />
+</a>
+<a href="https://devkaran-patidar.netlify.app/">
+  <img src="https://img.shields.io/badge/Portfolio-Visit-00d9ff?style=flat-square&logo=firefox&logoColor=white" />
+</a>
 
 </div>
 
 ---
 
-<img align="right" width="380" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" />
+## 👨‍💻 About Me
+
+I'm **Devkaran Patidar**, a Full Stack Developer focused on building practical and scalable web applications.
+
+I work mainly with **Python, Django, React, REST APIs, and SQL**, and I'm currently expanding my backend and system-design knowledge.
+
+```text
+┌──────────────────────────────────────────────────────────────┐
+│  👨‍💻  Full Stack Developer                                  │
+│                                                              │
+│  Backend       → Python · Django · REST APIs                 │
+│  Frontend      → React · JavaScript · Tailwind CSS           │
+│  Database      → SQL · MySQL · PostgreSQL · MongoDB          │
+│  Tools         → Git · GitHub · Docker · AWS                 │
+│                                                              │
+│  Currently learning → FastAPI · Databases · System Design   │
+└──────────────────────────────────────────────────────────────┘
+```
 
 ### `> whoami`
 
-```bash
-$ cat devkaran.config
-```
-
 ```json
 {
-  "name"     : "Devkaran Patidar",
-  "role"     : "Full Stack Developer",
-  "location" : "Indore MP",
-  "currently": "Building cool stuff",
-  "learning" : ["DataBases","Fast Api"],
-  "ask_me"   : ["React","Python","Django"],
-  "fun_fact" : "I debug with console.log and I'm proud of it 😄"
+  "name": "Devkaran Patidar",
+  "role": "Full Stack Developer",
+  "location": "Indore, Madhya Pradesh, India",
+  "focus": [
+    "Full Stack Web Development",
+    "REST API Development",
+    "Backend Engineering"
+  ],
+  "currently_learning": [
+    "FastAPI",
+    "Advanced Databases",
+    "System Design"
+  ],
+  "interests": [
+    "Web Development",
+    "DSA",
+    "Backend Development",
+    "Software Engineering"
+  ]
 }
 ```
 
-<br clear="right"/>
+---
+
+## 🚀 What I Build
+
+I enjoy turning ideas into complete web applications — from database design and REST APIs to responsive React interfaces.
+
+* 🔹 Full-stack web applications
+* 🔹 RESTful APIs with Django
+* 🔹 React-based frontend applications
+* 🔹 Authentication & authorization systems
+* 🔹 Database-driven applications
+* 🔹 Admin dashboards
+* 🔹 Scalable backend architecture
+* 🔹 Practical developer tools and projects
 
 ---
 
-## 🛠️ Tech Arsenal
+
+## 🛠️ Tech Stack
 
 <div align="center">
 
-#### ⚡ Languages
-<p>
-  <img src="https://skillicons.dev/icons?i=python,cpp,html,css,js&theme=dark" />
-</p>
+### 💻 Languages
 
-#### 🎨 Frontend
-<p>
-  <img src="https://skillicons.dev/icons?i=react,tailwind&theme=dark" />
-</p>
+<img src="https://skillicons.dev/icons?i=python,cpp,javascript,sql&theme=dark" />
 
-#### 🔧 Backend & Database
-<p>
-  <img src="https://skillicons.dev/icons?i=Django,fastapi,mongodb,postgresql,mysql&theme=dark" />
-</p>
+### 🎨 Frontend
 
-#### ☁️ Cloud & DevOps
-<p>
-  <img src="https://skillicons.dev/icons?i=aws,docker,git,github,vercel&theme=dark" />
-</p>
+<img src="https://skillicons.dev/icons?i=react,tailwind,html,css&theme=dark" />
+
+### ⚙️ Backend
+
+<img src="https://skillicons.dev/icons?i=django,fastapi,drf,restapi&theme=dark" />
+
+### 🗄️ Databases
+
+<img src="https://skillicons.dev/icons?i=mysql,postgresql,mongodb,sqlite&theme=dark" />
+
+### ☁️ Tools & DevOps
+
+<img src="https://skillicons.dev/icons?i=git,github,postman,vercel&theme=dark" />
 
 </div>
+
+---
+
+## 🧠 Currently Learning
+
+```text
+FastAPI
+   │
+   ├── API Architecture
+   ├── Authentication
+   └── Backend Performance
+
+Databases
+   │
+   ├── Query Optimization
+   ├── Indexing
+   ├── Transactions
+   └── Database Design
+
+Software Engineering
+   │
+   ├── System Design
+   ├── Clean Architecture
+   ├── REST API Design
+   └── Scalable Applications
+```
+
+---
+
+## 📌 Development Philosophy
+
+```text
+Build → Break → Debug → Learn → Improve → Repeat
+```
+
+I focus on:
+
+* Writing maintainable code
+* Understanding fundamentals instead of only using libraries
+* Building projects to solve practical problems
+* Improving API and database design
+* Learning from bugs and implementation challenges
 
 ---
 
 ## 📊 GitHub Analytics
 
-<!-- <div align="center">
-  <img height="195px" src="https://github-readme-stats.vercel.app/api?username=Devkaran-Patidar&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&title_color=00d9ff&icon_color=00d9ff&text_color=c9d1d9&bg_color=0d1117" />
-  <img height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Devkaran-Patidar&layout=compact&theme=github_dark&hide_border=true&title_color=00d9ff&text_color=c9d1d9&bg_color=0d1117&langs_count=8" />
-</div> -->
-
-<br/>
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=Devkaran-Patidar&theme=github-dark-blue&hide_border=true&background=0D1117&stroke=00D9FF&ring=00D9FF&fire=FF6B6B&currStreakLabel=00D9FF&sideLabels=00D9FF&dates=8b949e" />
-</div>
-
-
----
-
-## 📈 Contribution Graph
-
 <div align="center">
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Devkaran-Patidar&bg_color=0D1117&color=00D9FF&line=00D9FF&point=FFFFFF&area_color=0a3d62&area=true&hide_border=true&custom_title=Devkaran's%20Contribution%20Graph)](https://github.com/ashutosh00710/github-readme-activity-graph)
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=Devkaran-Patidar&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&title_color=00d9ff&icon_color=00d9ff&text_color=c9d1d9&bg_color=0d1117" />
 
-</div>
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Devkaran-Patidar&layout=compact&theme=github_dark&hide_border=true&title_color=00d9ff&text_color=c9d1d9&bg_color=0d1117&langs_count=8" />
 
----
-
-## 🌐 Let's Connect
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/devkaran-patidar-2ba713361/)
-[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://x.com/DevkaranPa98043)
-[![Portfolio](https://img.shields.io/badge/-Portfolio-FF5722?style=for-the-badge&logo=firefox&logoColor=white)](https://devkaran-patidar.netlify.app/)
-[![Gmail](https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:patidardevkaran2@gmail.com)
-[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/Devkaran-Patidar)
-
-</div>
-
----
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Devkaran-Patidar&style=for-the-badge&color=0a3d62&label=PROFILE+VIEWS" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00d9ff,50:0a3d62,100:0d1117&height=100&section=footer" />
+
+<img src="https://streak-stats.demolab.com?user=Devkaran-Patidar&theme=github-dark-blue&hide_border=true&background=0D1117&stroke=00D9FF&ring=00D9FF&fire=FF6B6B&currStreakLabel=00D9FF&sideLabels=00D9FF&dates=8b949e" />
+
+</div>
+
+---
+
+## 📈 Contribution Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Devkaran-Patidar&bg_color=0D1117&color=00D9FF&line=00D9FF&point=FFFFFF&area_color=0a3d62&area=true&hide_border=true&custom_title=Devkaran's%20Contribution%20Graph" />
+
+</div>
+
+---
+
+## 🏆 GitHub Achievements
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=Devkaran-Patidar&theme=onestar&no-frame=true&no-bg=true&margin-w=10&row=1" />
+
+</div>
+
+---
+
+## 📚 Currently Exploring
+
+| Area            | Topics                                       |
+| --------------- | -------------------------------------------- |
+| 🧠 DSA          | Arrays, Linked Lists, Stacks, Trees, Graphs  |
+| 🗄️ Databases   | SQL, Normalization, Indexing, Transactions   |
+| ⚙️ Backend      | Django REST Framework, FastAPI               |
+| 🎨 Frontend     | React, Tailwind CSS                          |
+| 🔐 Security     | JWT, Authentication, Authorization           |
+| ☁️ Cloud        | AWS, Docker, Deployment                      |
+| 🏗️ Engineering | REST APIs, System Design, Clean Architecture |
+
+---
+
+## 💼 Open To
+
+I'm interested in opportunities involving:
+
+```text
+Full Stack Development
+Backend Development
+Python Development
+React Development
+Software Engineering
+Web Application Development
+```
+
+---
+
+## 🤝 Let's Connect
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/devkaran-patidar-2ba713361/">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+<a href="https://devkaran-patidar.netlify.app/">
+<img src="https://img.shields.io/badge/Portfolio-00d9ff?style=for-the-badge&logo=firefox&logoColor=white" />
+</a>
+
+<a href="mailto:patidardevkaran2@gmail.com">
+<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+
+<a href="https://github.com/Devkaran-Patidar">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<a href="https://x.com/DevkaranPa98043">
+<img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" />
+</a>
+
+</div>
+
+---
+
+## 📬 Contact
+
+If you're interested in collaborating, discussing a project, or talking about software development:
+
+**Email:** [patidardevkaran2@gmail.com](mailto:patidardevkaran2@gmail.com)
+
+**Portfolio:** [devkaran-patidar.netlify.app](https://devkaran-patidar.netlify.app/)
+
+---
+
+<div align="center">
+
+<img src="https://komarev.com/ghpvc/?username=Devkaran-Patidar&style=for-the-badge&color=0a3d62&label=PROFILE+VIEWS" />
+
+<br/><br/>
+
+### `Building. Learning. Improving.`
+
+<br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00d9ff,50:0a3d62,100:0d1117&height=120&section=footer" />
+
 </div>
