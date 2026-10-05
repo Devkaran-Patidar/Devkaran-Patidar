@@ -175,25 +175,21 @@ I focus on:
 
 ---
 
-## 📈 Contribution Activity
 
-<div align="center">
+<!-- <div align="center">
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Devkaran-Patidar&bg_color=0D1117&color=00D9FF&line=00D9FF&point=FFFFFF&area_color=0a3d62&area=true&hide_border=true&custom_title=Devkaran's%20Contribution%20Graph" />
 
-</div>
+</div> -->
 
----
 
-## 🏆 GitHub Achievements
-
-<div align="center">
+<!-- <div align="center">
 
 <img src="https://github-profile-trophy.vercel.app/?username=Devkaran-Patidar&theme=onestar&no-frame=true&no-bg=true&margin-w=10&row=1" />
 
-</div>
+</div> -->
 
----
+
 
 ## 📚 Currently Exploring
 
